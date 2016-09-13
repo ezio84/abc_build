@@ -101,7 +101,7 @@ include $(BUILD_SYSTEM)/help.mk
 include $(BUILD_SYSTEM)/config.mk
 
 relaunch_with_ninja :=
-ifneq ($(USE_NINJA),false)
+ifeq ($(USE_NINJA),true)
 ifndef BUILDING_WITH_NINJA
 relaunch_with_ninja := true
 endif

@@ -21,7 +21,7 @@ ifneq ($(filter-out false,$(USE_GOMA)),)
   # once by kati with USE_NINJA=false. We do this check in the former
   # pass.
   ifndef KATI
-    ifeq ($(USE_NINJA),false)
+    ifneq ($(USE_NINJA),true)
       $(error USE_GOMA=true is not compatible with USE_NINJA=false)
     endif
   endif
