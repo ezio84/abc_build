@@ -460,9 +460,13 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   #script.Print("Target: %s" % CalculateFingerprint(
   #    oem_props, oem_dict, OPTIONS.info_dict))
-  script.Print("********************")
-  script.Print("**   ABC rom   **")
-  script.Print("********************")
+  script.Print("THE   db      `7MM***Yp,   .g8***bgd ")
+  script.Print("     ;MM:       MM    Yb .dP'     `M ")
+  script.Print("    ,V^MM.      MM    dP dM'       ` ")
+  script.Print("   ,M  `MM      MM***bg. MM          ")
+  script.Print("   AbmmmqMA     MM    `Y MM.        ____ ____ _  _")
+  script.Print("  A'     VML    MM    ,9 `Mb.     ,'|__/ |  | |\/|")
+  script.Print(".AMA.   .AMMA..JMMmmmd9    `*bmmmd' |  \ |__| |  |")
 
   script.AppendExtra("ifelse(is_mounted(\"/system\"), unmount(\"/system\"));")
   device_specific.FullOTA_InstallBegin()
