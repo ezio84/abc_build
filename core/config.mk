@@ -871,7 +871,7 @@ RSCOMPAT_NO_USAGEIO_API_LEVELS := 8 9 10 11 12 13
 ifneq ($(CUSTOM_BUILD),)
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
-$(eval include vendor/pure/sepolicy/sepolicy.mk)
+$(eval include vendor/nexus/sepolicy/sepolicy.mk)
 endif
 
 include $(BUILD_SYSTEM)/dumpvar.mk
