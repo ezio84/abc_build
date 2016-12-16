@@ -98,8 +98,12 @@ PRODUCT_COPY_FILES := \
 	frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
 	frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
-	frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf \
 	device/generic/goldfish/audio_policy.conf:system/etc/audio_policy.conf
+
+ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
+PRODUCT_COPY_FILES := \
+        frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
+endif
 
 include $(SRC_TARGET_DIR)/product/emulator.mk
 

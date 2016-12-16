@@ -51,8 +51,10 @@ PRODUCT_PACKAGES += \
     vibrator.default \
     power.default
 
+ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES := \
         frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=unknown
