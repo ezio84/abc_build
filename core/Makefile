@@ -2943,21 +2943,8 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) \
 
 CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/ABCrom_$(TARGET_PRODUCT)-$(ABC_VERSION).zip
 
-.PHONY: otapackage bacon
+.PHONY: otapackage
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-bacon: otapackage
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(CUSTOM_TARGET_PACKAGE) > $(CUSTOM_TARGET_PACKAGE).md5sum
-	@echo " "
-	@echo "THE   db       7MMmmmYp,   .g8mmmd· "
-	@echo "     ;MM:       MM    Yb .dP·      · "
-	@echo "    ,V^MM.      MM    dP dM·        "
-	@echo "   ,M  ·MM      MM···bg  MM"
-	@echo "   AbmmmqMA     MM    ·Y MM.           ____ ____ _  _  "
-	@echo "  A·     VML    MM    ,9 ·Mb.     ,·   |__/ |  | |\/| "
-	@echo ".AMA.   .AMMA  JMMmmmd9    ··bmmmd·    |  \ |__| |  |"
-	@echo " "
-	@echo -e "Package complete: $(CUSTOM_TARGET_PACKAGE)"
 
 endif    # build_ota_package
 
