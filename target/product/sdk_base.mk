@@ -66,10 +66,10 @@ PRODUCT_COPY_FILES := \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
 	hardware/libhardware_legacy/audio/audio_policy.conf:system/etc/audio_policy.conf
 
-ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES := \
-        frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
-endif
+#ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
+#PRODUCT_COPY_FILES := \
+#        frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
+#endif
 
 include $(SRC_TARGET_DIR)/product/emulator.mk
 
