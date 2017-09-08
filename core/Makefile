@@ -137,6 +137,13 @@ FINAL_VENDOR_DEFAULT_PROPERTIES := $(call uniq-pairs-by-first-component, \
     $(FINAL_VENDOR_DEFAULT_PROPERTIES),=)
 
 # -----------------------------------------------------------------
+# skip_fingerprint_from_file
+skip_fingerprint_from_file :=
+ifeq ($(PRODUCT_SKIP_FINGERPRINT_FROM_FILE), true)
+  skip_fingerprint_from_file := true
+endif
+
+# -----------------------------------------------------------------
 # prop.default
 ifdef property_overrides_split_enabled
 INSTALLED_DEFAULT_PROP_TARGET := $(TARGET_OUT)/etc/prop.default
@@ -174,7 +181,9 @@ $(INSTALLED_DEFAULT_PROP_TARGET): $(intermediate_system_build_prop)
 	        echo "#" >> $@;
 	$(hide) echo ro.bootimage.build.date=`$(DATE_FROM_FILE)`>>$@
 	$(hide) echo ro.bootimage.build.date.utc=`$(DATE_FROM_FILE) +%s`>>$@
+ifndef skip_fingerprint_from_file
 	$(hide) echo ro.bootimage.build.fingerprint="$(BUILD_FINGERPRINT_FROM_FILE)">>$@
+endif
 	$(hide) build/make/tools/post_process_props.py $@
 ifdef property_overrides_split_enabled
 	$(hide) mkdir -p $(TARGET_ROOT_OUT)
