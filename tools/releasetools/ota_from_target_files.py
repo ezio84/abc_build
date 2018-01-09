@@ -482,6 +482,9 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("   AbmmmqMA     MM    `Y MM.        ____ ____ _  _")
   script.Print("  A'     VML    MM    ,9 `Mb.     ,'|__/ |  | |\/|")
   script.Print(".AMA.   .AMMA..JMMmmmd9    `*bmmmd' |  \ |__| |  |")
+  script.Print(" ")
+  script.Print(" ")
+  script.Print("Installing this sexy af thingy")
 
   script.AppendExtra("ifelse(is_mounted(\"/system\"), unmount(\"/system\"));")
   device_specific.FullOTA_InstallBegin()
