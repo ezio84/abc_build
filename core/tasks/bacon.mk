@@ -15,16 +15,21 @@
 # -----------------------------------------------------------------
 # Bacon update package
 
-ifeq ($(TARGET_BACON_NAME),)
-    INTERNAL_BACON_NAME := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)
-else
-    INTERNAL_BACON_NAME := $(TARGET_BACON_NAME)
-endif
-
-INTERNAL_BACON_TARGET := $(PRODUCT_OUT)/$(INTERNAL_BACON_NAME).zip
+CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/ABC_ROM_$(TARGET_PRODUCT)-$(ABC_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTERNAL_BACON_TARGET)
-	$(hide) $(MD5SUM) $(INTERNAL_BACON_TARGET) | sed "s|$(PRODUCT_OUT)/||" > $(INTERNAL_BACON_TARGET).md5sum
-	@echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(CUSTOM_TARGET_PACKAGE) > $(CUSTOM_TARGET_PACKAGE).md5sum
+	@echo " "
+	@echo "THE   db       7MMmmmYp,   .g8mmmd· "
+	@echo "     ;MM:       MM    Yb .dP·      · "
+	@echo "    ,V^MM.      MM    dP dM·        "
+	@echo "   ,M  ·MM      MM···bg  MM"
+	@echo "   AbmmmqMA     MM    ·Y MM.           ____ ____ _  _  "
+	@echo "  A·     VML    MM    ,9 ·Mb.     ,·   |__/ |  | |\/| "
+	@echo ".AMA.   .AMMA  JMMmmmd9    ··bmmmd·    |  \ |__| |  |"
+	@echo " "
+	@echo -e "Package complete: $(CUSTOM_TARGET_PACKAGE)"
+	@echo " "
+	@echo "You are officially a karnt now "
