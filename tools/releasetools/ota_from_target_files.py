@@ -802,24 +802,15 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   #script.Print("Target: %s" % target_fp)
 
   script.Print(" ")
-  script.Print("         || THANK YOU FOR FLASHING ||        ");
+  script.Print(" You are officially a Karnt (Dave's TM) now! ");
   script.Print(" ")
-  script.Print(" DDDDDDDDDDDDD         UUUUUUUU     UUUUUUUU ");
-  script.Print(" D::::::::::::DDD      U::::::U     U::::::U ");
-  script.Print(" D:::::::::::::::DD    U::::::U     U::::::U ");
-  script.Print(" DDD:::::DDDDD:::::D   UU:::::U     U:::::UU ");
-  script.Print("   D:::::D    D:::::D   U:::::U     U:::::U  ");
-  script.Print("   D:::::D     D:::::D  U:::::U     U:::::U  ");
-  script.Print("   D:::::D     D:::::D  U:::::U     U:::::U  ");
-  script.Print("   D:::::D     D:::::D  U:::::U     U:::::U  ");
-  script.Print("   D:::::D     D:::::D  U:::::U     U:::::U  ");
-  script.Print("   D:::::D     D:::::D  U:::::U     U:::::U  ");
-  script.Print("   D:::::D     D:::::D  U:::::U     U:::::U  ");
-  script.Print("   D:::::D    D:::::D   U::::::U   U::::::U  ");
-  script.Print(" DDD:::::DDDDD:::::D    U:::::::UUU:::::::U  ");
-  script.Print(" D:::::::::::::::DD      UU:::::::::::::UU   ");
-  script.Print(" D::::::::::::DDD          UU:::::::::UU     ");
-  script.Print(" DDDDDDDDDDDDD               UUUUUUUUU       ");
+  script.Print("THE   db       7MMmmmYp,   .g8mmmd· ");
+  script.Print("     ;MM:       MM    Yb .dP·      · ");
+  script.Print("    ,V^MM.      MM    dP dM·        ");
+  script.Print("   ,M  ·MM      MM···bg  MM");
+  script.Print("   AbmmmqMA     MM    ·Y MM.           ____ ____ _  _  ");
+  script.Print("  A·     VML    MM    ,9 ·Mb.     ,·   |__/ |  | |\/| ");
+  script.Print(".AMA.   .AMMA  JMMmmmd9    ··bmmmd·    |  \ |__| |  |");
   script.Print(" ")
   script.Print("            |||  ANDROID 11  |||             ");
 
