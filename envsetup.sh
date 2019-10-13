@@ -143,12 +143,12 @@ function check_product()
         return
     fi
 
-    if (echo -n $1 | grep -q -e "^du_") ; then
-       DU_BUILD=$(echo -n $1 | sed -e 's/^du_//g')
+    if (echo -n $1 | grep -q -e "^abc_") ; then
+       ABC_BUILD=$(echo -n $1 | sed -e 's/^abc_//g')
     else
-       DU_BUILD=
+       ABC_BUILD=
     fi
-    export DU_BUILD
+    export ABC_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
