@@ -41,10 +41,13 @@ PRODUCT_PACKAGES += \
     WallpaperCropper \
     frameworks-base-overlays
 
-ifeq ($(filter blueline bonito coral crosshatch flame sargo taimen walleye,$(du_device)),)
-PRODUCT_PACKAGES += SystemUIGoogle
+SYSTEM_UI_PACKAGE :=
+ifneq ($(filter blueline bonito coral crosshatch flame sargo taimen walleye,$(ABC_BUILD)),)
+SYSTEM_UI_PACKAGE := SystemUIGoogle
+PRODUCT_PACKAGES += $(SYSTEM_UI_PACKAGE)
 else
-PRODUCT_PACKAGES += SystemUI
+SYSTEM_UI_PACKAGE := SystemUI
+PRODUCT_PACKAGES += $(SYSTEM_UI_PACKAGE)
 endif
 
 PRODUCT_PACKAGES_DEBUG += \
