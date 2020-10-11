@@ -277,7 +277,7 @@ endif
 # are specific to the user's build configuration.
 include $(BUILD_SYSTEM)/envsetup.mk
 
-ifneq ($(DU_BUILD),)
+ifneq ($(ABC_BUILD),)
 include $(TOPDIR)vendor/extras/build/boardconfig/BoardConfigCommon.mk
 endif
 
